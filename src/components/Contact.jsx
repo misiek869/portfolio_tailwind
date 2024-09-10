@@ -9,9 +9,12 @@ const Contact = () => {
 		e.preventDefault()
 
 		emailjs
-			.sendForm('service_bf4scjg', 'template_uuj0252', form.current, {
-				publicKey: 'vcTG7DbP8L8igeTvk',
-			})
+			.sendForm(
+				process.env.REACT_APP_SERVICE_ID, // Correct environment variable usage
+				process.env.REACT_APP_TEMPLATE_ID, // Correct environment variable usage
+				form.current,
+				process.env.REACT_APP_PUBLIC_KEY // Directly pass the public key here
+			)
 			.then(
 				() => {
 					console.log('SUCCESS!')
