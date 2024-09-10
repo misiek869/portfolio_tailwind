@@ -7,3 +7,11 @@
 		@apply mx-auto max-w-7xl;
 	}
 }
+
+:root {
+	--orange: 30, 100%, 60%;
+	--gray: 80, 20%, 73%;
+	--blue: 184, 66%, 28%;
+	--dark_green: 198, 31%, 19%;
+	--dark: 174, 21%, 20%;
+}
