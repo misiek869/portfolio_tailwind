@@ -1,7 +1,23 @@
-import React from 'react'
+import aboutImg from '../assets/aboutImg.svg'
+import SectionTitle from './SectionTitle'
 
 const About = () => {
-	return <div></div>
+	return (
+		<section className='bg-gray py-20' id='about'>
+			<div className='align-element grid  md:grid-cols-2 items-center gap-16'>
+				<img src={aboutImg} className='w-full h-64' />
+				<article>
+					<SectionTitle text='o mnie' />
+					<p className='text-slate-600 mt-8 leading-loose px-4'>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+						omnis exercitationem tempora, aliquid deleniti tenetur vero esse
+						praesentium eaque dicta fugiat? Molestiae expedita, nulla neque
+						error porro sint distinctio possimus!
+					</p>
+				</article>
+			</div>
+		</section>
+	)
 }
 
 export default About
