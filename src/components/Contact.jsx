@@ -1,5 +1,5 @@
 import SectionTitle from './SectionTitle'
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
@@ -10,10 +10,12 @@ const Contact = () => {
 
 		emailjs
 			.sendForm(
-				process.env.REACT_APP_SERVICE_ID, // Correct environment variable usage
-				process.env.REACT_APP_TEMPLATE_ID, // Correct environment variable usage
+				process.env.REACT_APP_SERVICE_ID,
+				process.env.REACT_APP_TEMPLATE_ID,
 				form.current,
-				process.env.REACT_APP_PUBLIC_KEY // Directly pass the public key here
+				{
+					publicKey: 'vcTG7DbP8L8igeTvk',
+				}
 			)
 			.then(
 				() => {
