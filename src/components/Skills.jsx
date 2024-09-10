@@ -1,6 +1,7 @@
 import { skills } from '../data'
 import SectionTitle from './SectionTitle'
 import SkillsCard from './SkillsCard'
+import TechSlider from './TechSlider'
 
 const Skills = () => {
 	return (
@@ -11,6 +12,7 @@ const Skills = () => {
 					return <SkillsCard key={skill.id} {...skill} />
 				})}
 			</div>
+			<TechSlider />
 		</section>
 	)
 }

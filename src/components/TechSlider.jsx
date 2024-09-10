@@ -1,6 +1,7 @@
 import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
+import 
 
 const TechSlider = () => {
 	var settings = {
@@ -88,9 +89,27 @@ const TechSlider = () => {
 	}
 
 	return (
-		<div>
-			<p>slider</p>
-		</div>
+		<Slider {...settings}>
+			<img src={`/html-icon.svg`} alt='html Logo' className='h-12 w-12' />
+			<img src={`/css-icon.svg`} alt='css Logo' className='h-12 w-12' />
+			<img
+				src={`/javascript-icon.svg`}
+				alt='javascript Logo'
+				className='h-12 w-12'
+			/>
+			<img
+				src={`/typescript-icon.svg`}
+				alt='typescript Logo'
+				className='h-12 w-12'
+			/>
+			<img src={`/react-icon.svg`} alt='react Logo' className='h-12 w-12' />
+			<img src={`/nextjs-icon.svg`} alt='nextjs Logo' className='h-12 w-12' />
+			<img
+				src={`/tailwind-icon.svg`}
+				alt='tailwind Logo'
+				className='h-12 w-12'
+			/>
+		</Slider>
 	)
 }
 
