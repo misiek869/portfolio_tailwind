@@ -6,7 +6,7 @@ const Hero = () => {
 		<section className='bg-blue py-24'>
 			<div className='align-element  px-8 grid md:grid-cols-2 items-center gap-8'>
 				<article>
-					<h1 className='text-7xl font-bold text-white tracking-wider'>
+					<h1 className='text-7xl font-semibold text-white tracking-wider'>
 						Jestem Michał
 					</h1>
 					<p className='mt-4 text-3xl text-white capitalize tracking-wide'>
