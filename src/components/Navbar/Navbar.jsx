@@ -1,7 +1,27 @@
-import React from 'react'
-import { links } from '../data'
+import { useEffect, useState } from 'react'
+import { links } from '../../data'
+import NavbarSmall from './NavbarSmall'
 
 const Navbar = () => {
+	const [selectedIndexOne, setSelectedIndexOne] = useState(0)
+	const [isOpen, setIsOpen] = useState(false)
+	const [isScrolled, setIsScrolled] = useState(false)
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop
+			setIsScrolled(scrollTop > 0)
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
+
+	const openNav = () => {
+		setIsOpen(true)
+	}
+
 	return (
 		<nav className='bg-blue '>
 			<div className='align-element  px-8 py-4 flex flex-col  sm:flex-row sm:gap-x-16 sm:items-center sm:py-8'>
